@@ -7,7 +7,8 @@
 # print(add_one(2))
 
 
-# First-Class Objects ->
+# First-Class Objects -> Birinchi darajali ob'ektlar  # noqa
+
 # def say_hello(name):
 #     return f"Hello {name}"
 #
@@ -86,7 +87,7 @@
 
 # 2
 
-from datetime import datetime
+# from datetime import datetime
 
 
 # def not_during_the_night(func):
