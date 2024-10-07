@@ -122,3 +122,82 @@
 # say_whee = decorator(say_whee)
 # say_whee()
 
+
+
+# Reusing Decorators -> Dekoratorlarni qayta ishlatish  # noqa
+
+# 1
+
+# def do_twice(func):
+#     def wrapper_do_twice():
+#         func()
+#         func()
+#     return wrapper_do_twice
+#
+# @do_twice
+# def say_whee():
+#     print("Whee!")
+#
+# say_whee()
+
+# Decorating Functions With Arguments -> Funksiyalarni Argumentlar bilan bezash     # noqa
+
+# 1
+
+# def do_twice(func):
+#     def wrapper_do_twice(*args, **kwargs):
+#         func(*args, **kwargs)
+#         func(*args, **kwargs)
+#     return wrapper_do_twice
+#
+#
+# @do_twice
+# def greet(name):
+#     print(f"Hello {name}")
+#
+# greet(name="World")
+
+# 2
+
+# def do_twice(func):
+#     def wrapper_do_twice(*args, **kwargs):
+#         func(*args, **kwargs)
+#         func(*args, **kwargs)
+#
+#     return wrapper_do_twice
+#
+# @do_twice
+# def say_whee():
+#     print("Whee!")
+#
+#
+# say_whee()
+#
+#
+#
+# @do_twice
+# def greet(name):
+#     print(f"Hello {name}")
+#
+#
+# greet("World")
+
+
+
+# Returning Values From Decorated Functions
+
+# 1
+
+# def do_twice(func):
+#     def wrapper_do_twice(*args, **kwargs):
+#         func(*args, **kwargs)
+#
+#
+#     return wrapper_do_twice
+# @do_twice
+# def return_greeting(name):
+#     print("Creating greeting")
+#     print( f"Hi {name}")
+#
+#
+# hi_adam = return_greeting("Adam")
