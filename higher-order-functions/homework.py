@@ -123,7 +123,6 @@
 # say_whee()
 
 
-
 # Reusing Decorators -> Dekoratorlarni qayta ishlatish  # noqa
 
 # 1
@@ -183,7 +182,6 @@
 # greet("World")
 
 
-
 # Returning Values From Decorated Functions
 
 # 1
@@ -201,3 +199,38 @@
 #
 #
 # hi_adam = return_greeting("Adam")
+
+
+# def do_twice(func):
+#     def wrapper_do_twice(*args, **kwargs):
+#         print("******")
+#         func(*args, **kwargs)
+#         print("******")
+#
+#     return wrapper_do_twice
+#
+#
+# @do_twice
+# def say_whee(a, b):
+#     print(a * b)
+#
+#
+# say_whee(2, 3)
+
+
+def do_twice(func):
+    def wrapper_do_twice(*args):
+        try:
+
+            func(*args)
+        except ZeroDivisionError:
+            print("bunday bo'lib bolmaydi!")
+
+    return wrapper_do_twice
+
+@do_twice
+def boo(s):
+    print(42 / 0)
+
+
+boo(0)
