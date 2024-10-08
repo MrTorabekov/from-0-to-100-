@@ -1,5 +1,8 @@
 import json
 
+
+
+
 s = """
 School management system
 1.Login
@@ -31,7 +34,7 @@ users = {
     }
 }
 
-d = """
+my = """
 1. my profile
 2. my lesson
 3. my class
@@ -39,9 +42,26 @@ d = """
 5. Break
 """
 
+teach = """
+1. profile
+2. classes
+3. add grade
+3. remove students"""
+
+find = """
+siz kimsiz?
+1. Teacher
+2. Student"""
+
 # data types for while
 
 while 1:
+    check = input(find)
+
+    if check == '1':
+        determine = input(teach)
+
+
 
     e = str(input(f"{s}"
                   f":"))
@@ -53,7 +73,7 @@ while 1:
             password = input("password: ")
             if username in users["students"][number]['username'] and password in str(
                     users["students"][number]["password"]):
-                print(d)
+                print(my)
 
                 while True:
                     option = input("s: ")
