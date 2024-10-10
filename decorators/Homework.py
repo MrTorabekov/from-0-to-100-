@@ -1,8 +1,5 @@
 import json
 
-
-
-
 s = """
 School management system
 1.Login
@@ -30,8 +27,24 @@ users = {
             "class": "10b23",
             "homeTask": "Decorators"
         },
+        "3":{
+            "fullname": "Diyorbek",
+            "username": "Torabekov_08",
+            "password": 2222,
+            "grade": None,
+            "lesson": "english",
+            "class": "10b23",
+            "homeTask": "Def func"
+        }
 
     }
+}
+
+teach_pr = {
+    "fullname": "Diyorbek",
+    "username": "Diyor",
+    "password": 1,
+    "class":"10b23"
 }
 
 my = """
@@ -42,35 +55,70 @@ my = """
 5. Break
 """
 
+find = """
+siz kimsiz?
+1. Teacher
+2. Student
+->:"""
+
 teach = """
 1. profile
 2. classes
 3. add grade
-3. remove students"""
+3. remove students
+Sizga qaysi biri kerak: """
 
-find = """
-siz kimsiz?
-1. Teacher
-2. Student"""
 
 # data types for while
 
 while 1:
     check = input(find)
-
     if check == '1':
-        determine = input(teach)
+        print("Siz Login qilishingiz kerak!")
+        username = input("username: ")
+        password = input("password: ")
+
+        if username in teach_pr['username'] and password in str(teach_pr["password"]):
+            determine = input(teach)
+            if determine == '1':
+                print(teach_pr)
+            elif determine == '2':
+                print(teach_pr['class'])
+            elif determine == '3':
+                student_id = input("O'quvchi ID sini kiriting: ")
+
+                if student_id in users["students"]:
+                    if teacher_mode:
+                        student = users["students"][student_id]
+
+                        if student["grade"] is None:
+                            print(f"{student['fullname']} uchun hali baho qo'yilmagan.")
+                            new_grade = int(input(f"{student['fullname']} uchun yangi bahoni kiriting: "))
+                        else:
+                            print(f"{student['fullname']}ning hozirgi bahosi: {student['grade']}")
+                            change = input("Bahoni o'zgartirmoqchimisiz? (ha/yo'q): ").lower()
+
+                            if change == "ha":
+                                new_grade = int(input(f"{student['fullname']} uchun yangi bahoni kiriting: "))
+                            else:
+                                new_grade = student["grade"]
+
+                        student["grade"] = new_grade
+                        print(f"O'quvchining yangi bahosi: {student['grade']}")
 
 
 
-    e = str(input(f"{s}"
-                  f":"))
+
+
+
+
+
+    e = str(input(f"{s}:"))
     if e == "1":
         number = input("id: ")
 
         if number in users["students"].keys():
-            username = input("username: ")
-            password = input("password: ")
+
             if username in users["students"][number]['username'] and password in str(
                     users["students"][number]["password"]):
                 print(my)
@@ -102,7 +150,7 @@ while 1:
         new_student = {}
 
         for key in ["fullname", "username", "password", "grade", "lesson", "class", "homeTask"]:
-            value = input(f"Enter {key.replace('','')}: ")
+            value = input(f"Enter {key.replace('', '')}: ")
             new_student[key] = value
 
         new_student["grade"] = int(new_student["grade"])
