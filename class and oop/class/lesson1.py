@@ -86,23 +86,49 @@
 #
 # print(obj.func())
 # print(ob1.func())
-#
 
 
-# class All:
-#     def __init__(self,number,numbers):
-#         self.number = number
-#         self.numbers = numbers
-#
-#
-#     def num(self):
-#         return (f"Qo'shish: {self.number + self.numbers} |"
-#                 f"ayirish: {self.number - self.numbers } |"
-#                 f"kopaytirish: {self.number * self.numbers} |"
-#                 f"Bo'lish: {self.number // self.numbers} |"
-#                 f"foiz: {self.number % self.numbers} |")
-#
-#
-# obj = All(10,19)
-#
-# print(obj.num())
+
+class All:
+    def __init__(self,number,numbers):
+        self.number = number
+        self.numbers = numbers
+
+
+    def num(self):
+        return (f"Qo'shish: {self.number + self.numbers} |"
+                f"ayirish: {self.number - self.numbers } |"
+                f"kopaytirish: {self.number * self.numbers} |"
+                f"Bo'lish: {self.number // self.numbers} |"
+                f"foiz: {self.number % self.numbers} |")
+
+
+obj = All(10,19)
+
+print(obj.num())
+
+# Parent class
+class All:
+    def __init__(self, number, numbers):
+        self.number = number
+        self.numbers = numbers
+
+    def basic_operations(self):
+        return (f"Qo'shish: {self.number + self.numbers} | "
+                f"Ayirish: {self.number - self.numbers} | "
+                f"Ko'paytirish: {self.number * self.numbers} | "
+                f"Bo'lish: {self.number // self.numbers} | "
+                f"Foiz: {self.number % self.numbers} |")
+
+# Child class inheriting from All
+class AdvancedAll(All):
+    def exponentiation(self):
+        return f"Daraja ko'tarish: {self.number ** self.numbers}"
+
+# Creating an object of the child class
+obj = AdvancedAll(10, 2)
+
+# Calling methods from the parent and child class
+print(obj.basic_operations())  # Parent class method
+print(obj.exponentiation())    # Child class method
+
