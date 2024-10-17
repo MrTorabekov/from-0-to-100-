@@ -1,38 +1,36 @@
-import os.path
+import os
 
+'''
 
+create folder data
+create files all
+files = ['main.py', 'main.jar', 'setup.py', 'main.go', 'index.js', 'index.html', 'main.css', 'style.css', 'main.cpp','server.go','source.cpp']
+files = {
+    '.py' : 4,
+    '.cpp' : 2,
+    '.css' : 3,
+}
+'''
 files = ['main.py', 'main.jar', 'setup.py', 'main.go', 'index.js', 'index.html', 'main.css', 'style.css', 'main.cpp',
          'server.go', 'source.cpp']
 
-file = "/Users/diyor/PycharmProjects/august 1/os module/data"
+# os.mkdir('data')
 
-py = 0
-jar = 0
-go = 0
-js = 0
-cpp = 0
-css = 0
-html = 0
+# for x in files:
+#     with open(f'data/{x}', 'w') as file:
+#         ...
 
-# for i in file:
-#     s = os.path.split(i)[1]
+# print(os.getcwd())
 
-for i in files:
-    if i.endswith(".py"):
-        py += 1
-    elif i.endswith(".jar"):
-        jar += 1
-    elif i.endswith(".go"):
-        go += 1
-    elif i.endswith(".js"):
-        js += 1
-    elif i.endswith(".html"):
-        html += 1
-    elif i.endswith("css"):
-        css +=1
-    elif i.endswith("cpp"):
-        cpp += 1
+data = {
 
-print(f"{py}, {jar}, {go}, {js}, {html}, {css}, {cpp}")
+}
+file = os.listdir('/Users/macbookair/dev/pdp/10a/data')
+for x in file:
+    s = os.path.splitext(x)[1]
+    if s in data:
+        data[s] += 1
+    else:
+        data[s] = 1
 
-
+print(data)
