@@ -1,0 +1,31 @@
+{
+    "students": {
+        "1": {
+            "fullname": "jack",
+            "username": "jacks",
+            "password": 1111,
+            "grade": 4,
+            "lesson": "Python,Math,English",
+            "class": "10b23",
+            "homeTask": "Decorators"
+        },
+        "2": {
+            "fullname": "Diyorbek",
+            "username": "Torabekov_08",
+            "password": 2222,
+            "grade": 5,
+            "lesson": "Python",
+            "class": "10b23",
+            "homeTask": "Decorators"
+        },
+        "3": {
+            "fullname": "Diyorbek",
+            "username": "Torabekov",
+            "password": "2",
+            "grade": 5,
+            "lesson": "math",
+            "class": "10b",
+            "homeTask": "deco"
+        }
+    }
+}
