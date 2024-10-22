@@ -1,0 +1,16 @@
+{
+    "name": "Diyorbek",
+    "age": 16,
+    "city": "Tashkent",
+    "language": [
+        "UZB",
+        "ENG"
+    ],
+    "jobs": "Programming",
+    "programming": [
+        "Python",
+        "go",
+        "rust"
+    ],
+    "level": "Junior +"
+}
