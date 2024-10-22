@@ -17,9 +17,6 @@ import json
 
 
 b = [
-    {"name": "lola", "age": 17, "grade": "A"},
-    {"name": "Olim", "age": 24, "grade": "B"},
-    {"name": "Ali", "age": 33, "grade": "C"},
 ]
 # json_obj = json.dumps(b,indent=4)
 with open("users.json",'r') as file:
