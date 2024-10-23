@@ -27,6 +27,7 @@ with open("student.json",'r') as file:
     with open('student.json', 'w') as file:
         json.dump(data, file, indent=4)
 
+
     print("Alining yoshi muvaffaqiyatli o'zgartirildi.\n")
     print("4-Task")
 # 4
