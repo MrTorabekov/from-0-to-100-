@@ -166,9 +166,9 @@
 # 9 Tuple, set va ularning metodlari  # noqa
 
 # 1
-# def sets(set1, set2):
-#     return set1.intersection(set2)
-#
-#
-# print(sets({1, 2, 3}, {2, 3, 4}))
+def sets(set1, set2):
+    return set1.intersection(set2)
+
+
+print(sets({1, 2, 3}, {2, 3, 4}))
 
