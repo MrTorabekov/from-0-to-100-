@@ -166,9 +166,50 @@
 # 9 Tuple, set va ularning metodlari  # noqa
 
 # 1
-def sets(set1, set2):
-    return set1.intersection(set2)
+# def sets(set1, set2):
+#     return set1.intersection(set2)
+#
+#
+# print(sets({1, 2, 3}, {2, 3, 4}))
+
+# 10   # Lug‘atlar va ularning metodlari  # noqa
+
+# 1
+
+# def keys(my_dict):
+#     for key in my_dict.keys():
+#         print(key)
+#
+# my_dict = {'name': 'Diyorbek', 'age': 16, 'city': 'Tashkent'}
+# keys(my_dict)
+
+# 2
+# def values(my_dict):
+#     return sum(my_dict.values())
+#
+# my_dict = {'a': 10, 'b': 20, 'c': 30}
+# total = values(my_dict)
+# print(total)
 
 
-print(sets({1, 2, 3}, {2, 3, 4}))
+# 11 Amaliy dars (Algorithm)  # noqa
 
+# 1
+# number = input("a: ")
+# num_list = list(map(float, number.split()))
+# average = sum(num_list) / len(num_list)
+# print("O'rta arifmetik qiymat:", average)
+
+# 2
+
+def fibonacci(n):
+    a = 0
+    b = 1
+    c = []
+    for _ in range(n):
+        c.append(a)
+        a, b = b, a + b
+    return c
+
+n = int(input("Nechta Fibonacci sonini chiqarish kerak?: "))
+print(fibonacci(n))
