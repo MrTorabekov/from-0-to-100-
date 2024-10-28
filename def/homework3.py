@@ -202,14 +202,14 @@
 
 # 2
 
-def fibonacci(n):
-    a = 0
-    b = 1
-    c = []
-    for _ in range(n):
-        c.append(a)
-        a, b = b, a + b
-    return c
-
-n = int(input("Nechta Fibonacci sonini chiqarish kerak?: "))
-print(fibonacci(n))
+# def fibonacci(n):
+#     a = 0
+#     b = 1
+#     c = []
+#     for _ in range(n):
+#         c.append(a)
+#         a, b = b, a + b
+#     return c
+#
+# n = int(input("Nechta Fibonacci sonini chiqarish kerak?: "))
+# print(fibonacci(n))
