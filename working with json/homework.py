@@ -16,23 +16,23 @@ b = [
 
 # 3
 
-with open("student.json",'r') as file:
-    data = json.load(file)
-
-    for student in data:
-        if student['name'] == 'Ali':
-            student['age'] = 28
-
-
-    with open('student.json', 'w') as file:
-        json.dump(data, file, indent=4)
-
-
-    print("Alining yoshi muvaffaqiyatli o'zgartirildi.\n")
-    print("4-Task")
-# 4
-
-    for i in data:
-        if i['age'] >= 21:
-            print(i['name'])
+# with open("student.json",'r') as file:
+#     data = json.load(file)
+#
+#     for student in data:
+#         if student['name'] == 'Ali':
+#             student['age'] = 28
+#
+#
+#     with open('student.json', 'w') as file:
+#         json.dump(data, file, indent=4)
+#
+#
+#     print("Alining yoshi muvaffaqiyatli o'zgartirildi.\n")
+#     print("4-Task")
+# # 4
+#
+#     for i in data:
+#         if i['age'] >= 21:
+#             print(i['name'])
 
