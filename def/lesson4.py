@@ -27,10 +27,10 @@
 # print(is_palindrome('aziza'))
 
 
-def list_sum(a):
-    total = 0
-    for i in a:
-        total += i
-    print(f"Elementlarning yig‘indisi: {total}")
-
-list_sum([1, 2, 3, 4, 5])
+# def list_sum(a):
+#     total = 0
+#     for i in a:
+#         total += i
+#     print(f"Elementlarning yig‘indisi: {total}")
+#
+# list_sum([1, 2, 3, 4, 5])
